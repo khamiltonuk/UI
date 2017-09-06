@@ -1,16 +1,21 @@
 const path = require('path');
 
 module.exports = {
-    entry: path.resolve('./public/index.html'),
+    entry: ['babel-polyfill', path.resolve('./source/client.js')],
+    output: {
+      path: path.resolve("./"),
+      filename: 'index.js',
+    },
     devServer:{
-        //inline: true,
+        inline: true,
         contentBase:"./public",
         port:3000
     },
     module: {
         loaders: [{
-          test: /\.html$/,
-          loader: "html-loader"
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader'
         }]
     }
 };
