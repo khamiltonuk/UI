@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './bootstrap/button';
 import Jumbotron from './bootstrap/jumbotron';
-import './sourceapp.scss';
+import './sourceapp.scss'
 
 export default class App extends React.Component{
 	render(){
