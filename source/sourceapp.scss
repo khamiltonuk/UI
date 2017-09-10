@@ -1,0 +1,7 @@
+$image: url(/img/forest-1198698_1920.jpg);
+$text-colour: white;
+
+.custom {
+	background-image: $image;
+	color: $text-colour;
+}
